@@ -1,0 +1,24 @@
+"""Методы отображения информации в консоли."""
+
+
+def show_collection(collection):
+    """Выводит список задач в удобном формате."""
+    print("\n" + "=" * 40)
+    if not collection:
+        print("Список задач пуст.")
+    else:
+        for number, task in enumerate(collection, start=1):
+            print(f"{number}. {task}")
+    print("=" * 40)
+
+
+def show_menu():
+    """Показывает главное меню."""
+    print(
+        "\nМенеджер задач"
+        "\n1 — Посмотреть задачи"
+        "\n2 — Добавить задачу"
+        "\n3 — Редактировать задачу"
+        "\n4 — Удалить задачу"
+        "\n5 — Выход"
+    )
